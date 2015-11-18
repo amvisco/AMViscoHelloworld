@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>alexa-skills-kit-samples</groupId>
   <artifactId>alexa-skills-kit-samples</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>1.1</version>
   <name>Alexa Skills Kit Samples</name>
   <url>http://developer.amazon.com/ask</url>
@@ -89,6 +89,13 @@
             <target>1.7</target>
           </configuration>
         </plugin>
+        <plugin>            
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <configuration>
+            <webXml>WebContent\WEB-INF\web.xml</webXml>        
+            </configuration>
+        </plugin>     
 
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
